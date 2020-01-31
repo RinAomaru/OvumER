@@ -6,7 +6,12 @@ using UnityEngine.SceneManagement;
 public class GameManager : MonoBehaviour
 {
     
-    public float demoVal = 10f;
+
+
+    public int leftEyeID;
+    public int rightEyeID;
+    public int noseID;
+    public int mouthID;
 
     private static GameManager _instance;
     public static GameManager instance
@@ -41,15 +46,6 @@ public class GameManager : MonoBehaviour
 
     }
 
-    void Start()
-    {
-        
-    }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 
 }
