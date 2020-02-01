@@ -27,11 +27,18 @@ public class BodypartGenerator : MonoBehaviour
     public void GenerateFace()
     {
 
-        GameObject[] oldFace = GameObject.FindGameObjectsWithTag("grabbable");
+        GameObject[] oldFace = GameObject.FindGameObjectsWithTag("faceComponent");
         for(int i = 0; i < oldFace.Length; i++)
         {
 
             Destroy(oldFace[i]);
+
+        }
+        GameObject[] oldParts = GameObject.FindGameObjectsWithTag("grabbable");
+        for(int i = 0; i < oldFace.Length; i++)
+        {
+
+            Destroy(oldParts[i]);
 
         }
 

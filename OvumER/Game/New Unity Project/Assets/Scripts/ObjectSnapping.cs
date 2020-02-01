@@ -14,6 +14,8 @@ public class ObjectSnapping : MonoBehaviour
 
     }
 
+    public int idRef = 1;
+
     public partType part;
 
 }

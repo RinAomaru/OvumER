@@ -30,7 +30,7 @@ Transform:
   m_GameObject: {fileID: 2188280413997470674}
   m_LocalRotation: {x: 0, y: -0.7071068, z: -0, w: 0.7071068}
   m_LocalPosition: {x: 6.69, y: 2.5613847, z: -0.33352506}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.3, y: 0.3, z: 0.3}
   m_Children:
   - {fileID: 7618395649573629031}
   m_Father: {fileID: 0}
@@ -125,6 +125,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 00c417de1f602fd4193fbd1e6fa3fbf9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  idRef: 5
   part: 2
 --- !u!1001 &3225508293978752893
 PrefabInstance:
@@ -193,11 +194,21 @@ PrefabInstance:
       propertyPath: m_Name
       value: Nose6
       objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: ad7c4d83ec4890c4ea51d57c62e48a25,
+        type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: -157825318150610632, guid: ad7c4d83ec4890c4ea51d57c62e48a25,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 6ba87d498252fb44faefa2199403a60a, type: 2}
+    - target: {fileID: 9101430577481724397, guid: ad7c4d83ec4890c4ea51d57c62e48a25,
+        type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ad7c4d83ec4890c4ea51d57c62e48a25, type: 3}
 --- !u!4 &7618395649573629031 stripped
