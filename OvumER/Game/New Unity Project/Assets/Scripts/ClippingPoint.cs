@@ -39,6 +39,31 @@ public class ClippingPoint : MonoBehaviour
 
                     attachedObj = other.gameObject;
 
+                    if(connectionType == ObjectSnapping.partType.leftEye)
+                    {
+
+                        GameManager.instance.gatheredLeftEyeID = other.gameObject.GetComponent<ObjectSnapping>().idRef;
+
+                    }
+                    if(connectionType == ObjectSnapping.partType.rightEye)
+                    {
+
+                        GameManager.instance.gatheredRightEyeID = other.gameObject.GetComponent<ObjectSnapping>().idRef;
+
+                    }
+                    if(connectionType == ObjectSnapping.partType.nose)
+                    {
+
+                        GameManager.instance.gatheredNoseID = other.gameObject.GetComponent<ObjectSnapping>().idRef;
+
+                    }
+                    if(connectionType == ObjectSnapping.partType.mouth)
+                    {
+
+                        GameManager.instance.gatheredMouthID = other.gameObject.GetComponent<ObjectSnapping>().idRef;
+
+                    }
+
                 }
 
 
@@ -59,6 +84,31 @@ public class ClippingPoint : MonoBehaviour
             {
 
                 attachedObj = null;
+
+                if(connectionType == ObjectSnapping.partType.leftEye)
+                    {
+
+                        GameManager.instance.gatheredLeftEyeID = -1;
+
+                    }
+                    if(connectionType == ObjectSnapping.partType.rightEye)
+                    {
+
+                        GameManager.instance.gatheredRightEyeID = -1;
+
+                    }
+                    if(connectionType == ObjectSnapping.partType.nose)
+                    {
+
+                        GameManager.instance.gatheredNoseID = -1;
+
+                    }
+                    if(connectionType == ObjectSnapping.partType.mouth)
+                    {
+
+                        GameManager.instance.gatheredMouthID = -1;
+
+                    }
 
             }
 
