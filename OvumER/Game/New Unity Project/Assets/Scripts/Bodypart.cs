@@ -8,7 +8,8 @@ public class Bodypart : MonoBehaviour
     public enum PartType
     {
 
-        Eye,
+        EyeLeft,
+        EyeRight,
         Nose,
         Mouth
 

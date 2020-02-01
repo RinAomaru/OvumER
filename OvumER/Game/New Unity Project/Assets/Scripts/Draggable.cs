@@ -12,12 +12,17 @@ public class Draggable : MonoBehaviour
     public Material oldMaterial;
     GameObject grabbedObject;
     GameObject selectedObject;
+    public GameObject arm;
 
 
     // Update is called once per frame
     void Update()
     {
         
+        Vector3 movepos = Input.mousePosition;
+        movepos = Camera.main.ScreenToWorldPoint(new Vector3(movepos.x, movepos.y, distanceFromCam));
+        arm.transform.LookAt(movepos);
+
         Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
         RaycastHit hit;
 
@@ -72,8 +77,7 @@ public class Draggable : MonoBehaviour
             if(grabbedObject != null)
             {
 
-                Vector3 movepos = Input.mousePosition;
-                movepos = Camera.main.ScreenToWorldPoint(new Vector3(movepos.x, movepos.y, distanceFromCam));
+                
                 grabbedObject.transform.position = movepos;
 
             }

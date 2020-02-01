@@ -6,7 +6,8 @@ public class BodypartGenerator : MonoBehaviour
 {
     
 
-    public GameObject[] availableEyes;
+    public GameObject[] availableEyesLeft;
+    public GameObject[] availableEyesRight;
     public GameObject[] availableNoses;
     public GameObject[] availableMouths;
 
@@ -26,7 +27,7 @@ public class BodypartGenerator : MonoBehaviour
     public void GenerateFace()
     {
 
-        GameObject[] oldFace = GameObject.FindGameObjectsWithTag("faceComponent");
+        GameObject[] oldFace = GameObject.FindGameObjectsWithTag("grabbable");
         for(int i = 0; i < oldFace.Length; i++)
         {
 
@@ -34,12 +35,12 @@ public class BodypartGenerator : MonoBehaviour
 
         }
 
-        int randVal = Random.Range(0, availableEyes.Length);
-        Instantiate(availableEyes[randVal], eyeLeft.transform.position, Quaternion.identity);
+        int randVal = Random.Range(0, availableEyesLeft.Length);
+        Instantiate(availableEyesLeft[randVal], eyeLeft.transform.position, Quaternion.identity);
         GameManager.instance.leftEyeID = randVal;
 
-        randVal = Random.Range(0, availableEyes.Length);
-        Instantiate(availableEyes[randVal], eyeRight.transform.position, Quaternion.identity);
+        randVal = Random.Range(0, availableEyesRight.Length);
+        Instantiate(availableEyesRight[randVal], eyeRight.transform.position, Quaternion.identity);
         GameManager.instance.rightEyeID = randVal;
 
         randVal = Random.Range(0, availableNoses.Length);
