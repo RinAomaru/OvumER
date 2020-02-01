@@ -12,7 +12,7 @@
 		_ToneIntensity("HalfTone Intensity", Range(0, 5)) = 0.3
 		_OutlineReference("Outline Layer", Int) = 4
 		_OutlineColour("Outline Colour", Color) = (0, 0, 0, 0)
-		_LineIntensity("Line thickness", Range(0, 0.5)) = 0.02
+		_LineIntensity("Line thickness", Range(0,  0.5)) = 0.02
 
 	}
 
@@ -131,6 +131,7 @@
 				float2 uv : TEXCOORD0;
 				float3 normal : NORMAL;
 
+
 			};
 
 			struct v2f
@@ -140,6 +141,7 @@
 				float2 uv : TEXCOORD0;
 				float3 normal : TEXCOORD1;
 				float3 worldPos : TEXCOORD2;
+
 
 			};
 
@@ -158,7 +160,7 @@
 				i.normal = UnityObjectToWorldNormal(v.normal);
 				i.uv = v.uv;
 				//i.position += float4(i.normal * _LineIntensity, 0);
-
+				
 				return i;
 
 			}
@@ -167,7 +169,7 @@
 			{
 
 
-				return _OutlineColour;
+				return _OutlineColour * ((sin(_Time.y * 4) + 2) / 3);
 
 
 			}
