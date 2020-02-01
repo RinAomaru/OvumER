@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 public class GameManager : MonoBehaviour
 {
     
-
+    public GameObject _grabbed;
 
     public int leftEyeID;
     public int rightEyeID;

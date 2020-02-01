@@ -6,6 +6,7 @@ TagManager:
   tags:
   - BodyNode
   - faceComponent
+  - grabbable
   layers:
   - Default
   - TransparentFX
